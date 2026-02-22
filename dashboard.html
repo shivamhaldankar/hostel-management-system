@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Hostel Management System</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-brand">
+                <span class="brand-icon">🏢</span>
+                <span class="brand-text">Hostel Management</span>
+            </div>
+            
+            <ul class="navbar-menu">
+                <li><a href="dashboard.html" class="active">Dashboard</a></li>
+                <li><a href="browse-rooms.html">Browse Rooms</a></li>
+                <li><a href="my-bookings.html">My Bookings</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="#" onclick="logout()">Logout</a></li>
+            </ul>
+            
+            <div class="user-info">
+                <span id="userName">User</span>
+                <button class="btn-menu-toggle">☰</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="main-container">
+        <div class="container">
+            <div class="page-header">
+                <h1>Welcome to Hostel Management</h1>
+                <p id="userGreeting">Loading...</p>
+            </div>
+
+            <!-- Dashboard Grid -->
+            <div class="dashboard-grid">
+                <!-- Stats Cards -->
+                <div class="stats-card">
+                    <div class="stats-icon" style="background: #E8F5E9;">📊</div>
+                    <div class="stats-content">
+                        <h3>Total Hostels</h3>
+                        <p id="totalHostels" class="stats-number">0</p>
+                    </div>
+                </div>
+
+                <div class="stats-card">
+                    <div class="stats-icon" style="background: #E3F2FD;">🛏️</div>
+                    <div class="stats-content">
+                        <h3>Available Rooms</h3>
+                        <p id="availableRooms" class="stats-number">0</p>
+                    </div>
+                </div>
+
+                <div class="stats-card">
+                    <div class="stats-icon" style="background: #FFF3E0;">📅</div>
+                    <div class="stats-content">
+                        <h3>My Bookings</h3>
+                        <p id="myBookings" class="stats-number">0</p>
+                    </div>
+                </div>
+
+                <div class="stats-card">
+                    <div class="stats-icon" style="background: #F3E5F5;">💰</div>
+                    <div class="stats-content">
+                        <h3>Total Spent</h3>
+                        <p id="totalSpent" class="stats-number">$0</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recent Bookings -->
+            <div class="dashboard-section">
+                <div class="section-header">
+                    <h2>Recent Bookings</h2>
+                    <a href="my-bookings.html" class="btn-link">View All →</a>
+                </div>
+                
+                <div id="recentBookingsContainer" class="bookings-table-container">
+                    <p class="loading">Loading...</p>
+                </div>
+            </div>
+
+            <!-- Quick Actions -->
+            <div class="dashboard-section">
+                <div class="section-header">
+                    <h2>Quick Actions</h2>
+                </div>
+                
+                <div class="quick-actions">
+                    <a href="browse-rooms.html" class="action-card">
+                        <div class="action-icon">🔍</div>
+                        <h3>Browse Rooms</h3>
+                        <p>Find and book available rooms</p>
+                    </a>
+                    
+                    <a href="profile.html" class="action-card">
+                        <div class="action-icon">👤</div>
+                        <h3>My Profile</h3>
+                        <p>Manage your profile information</p>
+                    </a>
+                    
+                    <a href="complaints.html" class="action-card">
+                        <div class="action-icon">📝</div>
+                        <h3>File Complaint</h3>
+                        <p>Report issues or concerns</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/dashboard.js"></script>
+</body>
+</html>

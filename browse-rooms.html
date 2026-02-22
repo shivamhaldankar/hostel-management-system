@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browse Rooms - Hostel Management System</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/browse-rooms.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-brand">
+                <span class="brand-icon">🏢</span>
+                <span class="brand-text">Hostel Management</span>
+            </div>
+            
+            <ul class="navbar-menu">
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="browse-rooms.html" class="active">Browse Rooms</a></li>
+                <li><a href="my-bookings.html">My Bookings</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="#" onclick="logout()">Logout</a></li>
+            </ul>
+            
+            <div class="user-info">
+                <span id="userName">User</span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="main-container">
+        <div class="container">
+            <div class="page-header">
+                <h1>Find Your Perfect Room</h1>
+                <p>Browse available rooms in our hostels</p>
+            </div>
+
+            <div class="browse-content">
+                <!-- Filters Sidebar -->
+                <aside class="filters-sidebar">
+                    <h3>Filters</h3>
+                    
+                    <div class="filter-group">
+                        <label>Hostel</label>
+                        <select id="hostelFilter">
+                            <option value="">All Hostels</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label>Room Type</label>
+                        <div class="checkbox-group">
+                            <label><input type="checkbox" class="roomTypeFilter" value="single"> Single</label>
+                            <label><input type="checkbox" class="roomTypeFilter" value="double"> Double</label>
+                            <label><input type="checkbox" class="roomTypeFilter" value="triple"> Triple</label>
+                            <label><input type="checkbox" class="roomTypeFilter" value="quad"> Quad</label>
+                        </div>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label>Price Range</label>
+                        <div class="price-filter">
+                            <input type="number" id="minPrice" placeholder="Min" min="0">
+                            <span>-</span>
+                            <input type="number" id="maxPrice" placeholder="Max" min="0">
+                        </div>
+                    </div>
+                    
+                    <button class="btn btn-primary" onclick="applyFilters()">Apply Filters</button>
+                    <button class="btn btn-secondary" onclick="resetFilters()">Reset</button>
+                </aside>
+
+                <!-- Rooms Grid -->
+                <div class="rooms-section">
+                    <div class="rooms-grid" id="roomsContainer">
+                        <div class="loading">Loading rooms...</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Room Details Modal -->
+    <div id="roomModal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeRoomModal()">&times;</span>
+            <div class="room-modal-header">
+                <h2 id="modalRoomTitle">Room Details</h2>
+            </div>
+            <div class="room-modal-body">
+                <div class="room-details-grid">
+                    <div class="detail-item">
+                        <label>Room Number</label>
+                        <p id="modalRoomNumber">-</p>
+                    </div>
+                    <div class="detail-item">
+                        <label>Room Type</label>
+                        <p id="modalRoomType">-</p>
+                    </div>
+                    <div class="detail-item">
+                        <label>Capacity</label>
+                        <p id="modalRoomCapacity">-</p>
+                    </div>
+                    <div class="detail-item">
+                        <label>Available Beds</label>
+                        <p id="modalAvailableBeds">-</p>
+                    </div>
+                    <div class="detail-item">
+                        <label>Monthly Rent</label>
+                        <p id="modalRoomRent">-</p>
+                    </div>
+                    <div class="detail-item">
+                        <label>Status</label>
+                        <p id="modalRoomStatus">-</p>
+                    </div>
+                    <div class="detail-item full-width">
+                        <label>Hostel</label>
+                        <p id="modalHostelName">-</p>
+                    </div>
+                    <div class="detail-item full-width">
+                        <label>Address</label>
+                        <p id="modalHostelAddress">-</p>
+                    </div>
+                </div>
+                
+                <div class="booking-form">
+                    <h3>Book This Room</h3>
+                    <div class="form-group">
+                        <label for="checkInDate">Check-in Date</label>
+                        <input type="date" id="checkInDate" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="checkOutDate">Check-out Date (Optional)</label>
+                        <input type="date" id="checkOutDate">
+                    </div>
+                    <button class="btn btn-primary btn-block" onclick="bookRoom()">Book Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/browse-rooms.js"></script>
+</body>
+</html>

@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Features - Hostel Management System</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        h1 {
+            text-align: center;
+            color: white;
+            margin-bottom: 10px;
+            font-size: 2.5rem;
+        }
+        
+        .subtitle {
+            text-align: center;
+            color: rgba(255,255,255,0.9);
+            margin-bottom: 40px;
+            font-size: 1.1rem;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .feature-card {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+        }
+        
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+        }
+        
+        .feature-card h3 {
+            color: #667eea;
+            margin-bottom: 10px;
+            font-size: 1.5rem;
+        }
+        
+        .feature-card p {
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        .section {
+            background: white;
+            border-radius: 10px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        
+        .section h2 {
+            color: #667eea;
+            margin-bottom: 20px;
+            font-size: 2rem;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+        }
+        
+        .section ul {
+            margin-left: 20px;
+            color: #555;
+        }
+        
+        .section li {
+            margin-bottom: 12px;
+            line-height: 1.8;
+        }
+        
+        .tech-stack {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .tech-badge {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: bold;
+        }
+        
+        .button {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 8px;
+            text-decoration: none;
+            margin-top: 20px;
+            transition: transform 0.3s ease;
+        }
+        
+        .button:hover {
+            transform: scale(1.05);
+        }
+        
+        .comparison-table {
+            width: 100%;
+            margin-top: 20px;
+            border-collapse: collapse;
+        }
+        
+        .comparison-table th,
+        .comparison-table td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .comparison-table th {
+            background: #f5f5f5;
+            font-weight: bold;
+            color: #667eea;
+        }
+        
+        .comparison-table tr:hover {
+            background: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🏢 Hostel Management System</h1>
+        <p class="subtitle">A Complete Solution for Hostel Room Booking and Management</p>
+        
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">👤</div>
+                <h3>User Authentication</h3>
+                <p>Secure registration and login system with session management for students and administrators.</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">🛏️</div>
+                <h3>Room Browsing</h3>
+                <p>Browse available hostels and rooms with advanced filtering by hostel, room type, and price range.</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">📅</div>
+                <h3>Easy Booking</h3>
+                <p>Simple room booking interface with date selection and instant confirmation.</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">📊</div>
+                <h3>Dashboard</h3>
+                <p>Comprehensive dashboard showing key statistics, recent bookings, and quick action buttons.</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">💰</div>
+                <h3>Booking Management</h3>
+                <p>View all bookings, filter by status, manage reservations, and track payments.</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">👥</div>
+                <h3>Profile Management</h3>
+                <p>Update personal information, change passwords, and manage account settings securely.</p>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>📱 Responsive Design</h2>
+            <p>The system is fully responsive and works seamlessly on:</p>
+            <ul>
+                <li>Desktop computers and laptops</li>
+                <li>Tablets and iPad devices</li>
+                <li>Mobile phones (iPhone, Android)</li>
+            </ul>
+            <p style="margin-top: 15px;">The modern UI includes:</p>
+            <ul>
+                <li>Smooth animations and transitions</li>
+                <li>Professional color scheme with blue theme</li>
+                <li>Clear typography and readable fonts</li>
+                <li>Intuitive navigation menus</li>
+                <li>Mobile-friendly form inputs</li>
+            </ul>
+        </div>
+        
+        <div class="section">
+            <h2>🛠️ Technology Stack</h2>
+            <div class="tech-stack">
+                <div class="tech-badge">HTML5</div>
+                <div class="tech-badge">CSS3</div>
+                <div class="tech-badge">JavaScript (ES6)</div>
+                <div class="tech-badge">PHP 7+</div>
+                <div class="tech-badge">MySQL 5.7+</div>
+                <div class="tech-badge">AJAX</div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>📑 Core Features</h2>
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Feature</th>
+                        <th>Description</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>User Registration</td>
+                        <td>New users can create accounts with email and password</td>
+                        <td>✅ Complete</td>
+                    </tr>
+                    <tr>
+                        <td>User Login</td>
+                        <td>Secure login with session management</td>
+                        <td>✅ Complete</td>
+                    </tr>
+                    <tr>
+                        <td>Browse Hostels</td>
+                        <td>View all available hostels with details</td>
+                        <td>✅ Complete</td>
+                    </tr>
+                    <tr>
+                        <td>Browse Rooms</td>
+                        <td>View rooms with advanced filtering options</td>
+                        <td>✅ Complete</td>
+                    </tr>
+                    <tr>
+                        <td>Room Booking</td>
+                        <td>Book rooms with date selection</td>
+                        <td>✅ Complete</td>
+                    </tr>
+                    <tr>
+                        <td>Booking Management</td>
+                        <td>View, cancel, and filter bookings</td>
+                        <td>✅ Complete</td>
+                    </tr>
+                    <tr>
+                        <td>Dashboard Stats</td>
+                        <td>View bookings, spent amount, available rooms</td>
+                        <td>✅ Complete</td>
+                    </tr>
+                    <tr>
+                        <td>Profile Management</td>
+                        <td>Update profile and change password</td>
+                        <td>✅ Complete</td>
+                    </tr>
+                    <tr>
+                        <td>Responsive Design</td>
+                        <td>Works on all devices (desktop, tablet, mobile)</td>
+                        <td>✅ Complete</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="section">
+            <h2>🎯 Future Enhancements</h2>
+            <ul>
+                <li><strong>Payment Integration:</strong> Stripe or PayPal for online payments</li>
+                <li><strong>Email System:</strong> Booking confirmations and password resets</li>
+                <li><strong>Admin Dashboard:</strong> Comprehensive hostel and room management</li>
+                <li><strong>Complaints System:</strong> Report and track issues</li>
+                <li><strong>Reviews & Ratings:</strong> Rate hostels and rooms</li>
+                <li><strong>Multi-language Support:</strong> Support for multiple languages</li>
+                <li><strong>Mobile App:</strong> Native or hybrid mobile application</li>
+                <li><strong>Advanced Analytics:</strong> Detailed booking and revenue reports</li>
+            </ul>
+        </div>
+        
+        <div class="section">
+            <h2>🚀 Getting Started</h2>
+            <p>To start using the Hostel Management System:</p>
+            <ol style="margin-left: 20px; margin-top: 15px;">
+                <li>Set up a local server (XAMPP, WAMP, or MAMP)</li>
+                <li>Copy project files to web root</li>
+                <li>Import the database.sql file</li>
+                <li>Configure database credentials in php/config.php</li>
+                <li>Open http://localhost/hostel_management/ in browser</li>
+                <li>Login with provided test credentials</li>
+                <li>Start exploring all features!</li>
+            </ol>
+            <a href="README.md" class="button">View Full Documentation</a>
+        </div>
+        
+        <div class="section" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; text-align: center;">
+            <h2 style="color: white; border-bottom-color: white;">Ready to Get Started?</h2>
+            <p>The Hostel Management System is ready to use. Simply follow the setup instructions and start managing your hostel bookings!</p>
+            <p style="margin-top: 15px; font-size: 0.9rem;">Version 1.0.0 | Built with ❤️ using HTML, CSS, JavaScript, PHP, and MySQL</p>
+        </div>
+    </div>
+</body>
+</html>
